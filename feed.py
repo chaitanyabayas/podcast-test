@@ -34,7 +34,6 @@ for item in yaml_data['item']:
     xml_tree.SubElement(item_element, 'itunes:duration').text = item['duration']
     xml_tree.SubElement(item_element, 'pubDate').text = item['published']
     xml_tree.SubElement(item_element, 'title').text = item['title']
-
     enclosure = xml_tree.SubElement(rss_element, 'elclosure', {
         'url': link_prefix + item['file'],
         'type': 'audio/mpeg',
